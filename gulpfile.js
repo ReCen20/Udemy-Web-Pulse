@@ -32,6 +32,7 @@ gulp.task('styles', function(){
 gulp.task("watch", function(){
     gulp.watch("./src/sass/**/*.+(sass|scss)", gulp.parallel("styles"));
     gulp.watch("./src/*.html").on("change", browserSync.reload);
+    gulp.watch("./src/js/*.js").on("change", browserSync.reload);
 });
 
 gulp.task("default", gulp.parallel("browser-sync", "styles", "watch"));

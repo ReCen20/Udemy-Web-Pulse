@@ -1,0 +1,21 @@
+.carousel
+    min-height: 745px
+    display: flex
+    justify-content: center
+    align-items: center
+    &__inner
+        width: 750px
+        margin: 0 auto
+    &__prev, &__next
+        position: absolute
+        border: none
+        background: #fff
+        top: 50%
+        transform: translateY(-50%)
+        left: -66px
+        &:focus
+            outline: none
+    &__next
+        right: -66px
+        left: auto
+            
