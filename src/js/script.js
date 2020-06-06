@@ -1,7 +1,17 @@
-$(document).ready(function(){
-    $('.carousel__inner').slick({
-        adaptiveHeight: true,
-        prevArrow: '<button type="button" class="carousel__prev"><img src="icons/carousel/left-arrow.png"</button>',
-        nextArrow: '<button type="button" class="carousel__next"><img src="icons/carousel/right-arrow.png"</button>'
-    });
+const slider = tns({
+    container: '.carousel__inner',
+    items: 1,
+    slideBy: 'page',
+    controls: false,
+    speed: 1500,
+    autoHeight: true,
+    nav: false
+});
+
+document.querySelector('.carousel__prev').addEventListener('click', function () {
+    slider.goTo('prev');
+});
+
+document.querySelector('.carousel__next').addEventListener('click', function () {
+    slider.goTo('next');
 });
