@@ -1,0 +1,52 @@
+.catalog-item
+    margin-top: 20px
+    min-height: 440px
+    width: 300px
+    padding: 20px 20px 25px 20px
+    border: 2.0px solid #e8e8e8
+    overflow: hidden
+    &__wrapper
+        width: calc(200% + 40px)
+        display: flex
+    &__main-content
+        width: 50%
+        padding-right: 20px
+        transform: translateX(-100%)
+        &_active
+           transform: translateX(0) 
+    &__second-content
+        transform: translateX(0) 
+        width: 50%
+        padding-left: 20px
+        &_active
+            transform: translateX(-100%) 
+    &__list
+        margin: 0
+        padding: 0
+        padding-left: 17px
+        list-style-type: none
+        li
+            font-size: 14px
+            line-height: 1.2
+            font-weight: 300
+            color: #555555
+            margin-bottom: 20px
+    &__icon
+        display: block
+        margin: 0 auto
+        height: 200px
+    &__descr
+        margin-top: 16px
+        font-size: 14px
+        line-height: 1.2
+        font-weight: 300
+        color: #0d0d0d
+        text-align: center
+    &__link
+        display: block
+        margin-top: 17px
+        text-align: center
+        font-size: 14px
+        line-height: 1.2
+        font-weight: 500
+        color: #c70101

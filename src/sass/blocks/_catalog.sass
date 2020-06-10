@@ -1,0 +1,32 @@
+.catalog
+    min-height: 860px
+    padding: 0 0 100px 0
+    &__tabs
+        margin-top: 70px
+        display: flex
+        justify-content: center
+        align-items: flex-start
+    &__tab
+        text-align: center
+        height: 50px
+        width: 200px
+        margin: 0 5px
+        font-size: 18px
+        line-height: 48px
+        font-weight: 500
+        text-transform: uppercase
+        transform: skewX(-25deg)
+        color: #6b6b6b
+        border: 2.0px solid #d0d0d0
+        div
+            transform: skewX(25deg)
+        &:not(.catalog__tab_active)
+            &:hover
+                border: none
+                box-shadow: 0 0 20px #c70101
+        &_active
+            background-color: #c70101
+            color: #ffffff
+            border: none
+    &__content
+        margin-top: 40px
