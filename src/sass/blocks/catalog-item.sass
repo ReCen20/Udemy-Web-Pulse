@@ -1,36 +1,54 @@
 .catalog-item
     margin-top: 20px
+    margin-right: 20px
     min-height: 440px
     width: 300px
     padding: 20px 20px 25px 20px
     border: 2.0px solid #e8e8e8
     overflow: hidden
+    &:last-child
+            margin-right: 0px
     &__wrapper
         width: calc(200% + 40px)
         display: flex
     &__main-content
         width: 50%
         padding-right: 20px
+        transition: all 0.8s
         transform: translateX(-100%)
         &_active
            transform: translateX(0) 
     &__second-content
-        transform: translateX(0) 
         width: 50%
         padding-left: 20px
+        transition: all 0.8s
+        transform: translateX(0) 
+        display: flex
+        flex-direction: column
+        justify-content: space-between
         &_active
             transform: translateX(-100%) 
     &__list
         margin: 0
         padding: 0
         padding-left: 17px
+        padding-right: 22px
         list-style-type: none
         li
+            position: relative
             font-size: 14px
             line-height: 1.2
             font-weight: 300
             color: #555555
             margin-bottom: 20px
+            &::before
+                content: ''
+                width: 5px
+                height: 5px
+                position: absolute
+                background-color: #c70101
+                top: 6px
+                left: -19px
     &__icon
         display: block
         margin: 0 auto
@@ -42,11 +60,39 @@
         font-weight: 300
         color: #0d0d0d
         text-align: center
-    &__link
+    &__link, &__back
         display: block
-        margin-top: 17px
+        margin: 0 auto
         text-align: center
+        margin-top: 17px
         font-size: 14px
         line-height: 1.2
         font-weight: 500
         color: #c70101
+    &__back
+        margin-left: 50%
+        transform: translateX(calc(-50% - 20px))
+    hr
+        margin: 0
+        margin-top: 19px
+        width: 260px
+        height: 1px
+        background-color: #e8e8e8
+    &__footer
+        margin-top: 21px
+        display: flex
+        justify-content: space-between
+    &__prices
+        display: flex
+        flex-direction: column
+    &__old-price
+        text-decoration: line-through
+        font-size: 14px
+        line-height: 1.2
+        font-weight: 300
+        color: #555555
+    &__price
+        font-size: 20px
+        line-height: 1.2
+        font-weight: 700
+        color: #050505

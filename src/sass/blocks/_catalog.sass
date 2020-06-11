@@ -1,11 +1,12 @@
 .catalog
-    min-height: 860px
+    min-height: 740px
     padding: 0 0 100px 0
     &__tabs
         margin-top: 70px
         display: flex
         justify-content: center
         align-items: flex-start
+        list-style-type: none
     &__tab
         text-align: center
         height: 50px
@@ -29,4 +30,8 @@
             color: #ffffff
             border: none
     &__content
+        display: none
         margin-top: 40px
+        &_active
+            display: flex
+            flex-wrap: wrap
