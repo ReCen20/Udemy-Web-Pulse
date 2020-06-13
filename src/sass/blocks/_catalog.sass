@@ -19,10 +19,12 @@
         transform: skewX(-25deg)
         color: #6b6b6b
         border: 2.0px solid #d0d0d0
+        cursor: default
         div
             transform: skewX(25deg)
         &:not(.catalog__tab_active)
             &:hover
+                cursor: pointer
                 border: none
                 box-shadow: 0 0 20px #c70101
         &_active
