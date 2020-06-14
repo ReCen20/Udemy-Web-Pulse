@@ -100,7 +100,7 @@
                 <div class="consultation__descr">Просто заполните форму заявки<br>и мы перезвоним вам в течении 10 минут</div>
                 <form class="form">
                     <input required name="name" placeholder="Ваше имя" type="text">
-                    <input required name="tel" placeholder="Ваш телефон" type="tel">
+                    <input required name="tel" placeholder="Ваш телефон">
                     <input required name="email" placeholder="Ваш E-mail" type="email">
                     <button class="button button_consultation">заказать кОНСУЛЬТАЦИЮ</button>
                 </form>
@@ -462,23 +462,23 @@
             <div class="modal__close">&times</div>
             <h3 class="subtitle">Просто заполните форму заявки</h3>
             <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
-            <div class="form">
+            <form class="form">
                 <input required name="name" placeholder="Ваше имя" type="text">
-                <input required name="tel" placeholder="Ваш телефон" type="tel">
+                <input required name="tel" placeholder="Ваш телефон">
                 <input required name="email" placeholder="Ваш E-mail" type="email">
                 <button class="button button_modal">заказать консультацию</button>
-            </div>
+            </form>
         </div>
         <div class="modal" id="modal__buy">
             <div class="modal__close">&times</div>
             <h3 class="subtitle">Ваш заказ:</h3>
             <div class="modal__descr">Пульсометр Polar FT1</div>
-            <div class="form">
+            <form class="form">
                 <input required name="name" placeholder="Ваше имя" type="text">
-                <input required name="tel" placeholder="Ваш телефон" type="tel">
+                <input required name="tel" placeholder="Ваш телефон">
                 <input required name="email" placeholder="Ваш E-mail" type="email">
                 <button class="button button_modal">купить</button>
-            </div>
+            </form>
         </div>
         <div class="modal modal_thanks" id="modal__thanks">
             <div class="modal__close">&times</div>
@@ -490,6 +490,8 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>            
 </body>
 </html>

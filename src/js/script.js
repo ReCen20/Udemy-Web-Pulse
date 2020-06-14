@@ -49,3 +49,39 @@ $('.button_catalog-item').each(function(i){
         $('.overlay, #modal__buy').fadeIn();
     });
 });
+
+function modalValidate (formClass) {
+    $(formClass).validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2
+            },
+            tel: {
+                required: true
+            },
+            email: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            name: {
+                required: "Пожалуйста, заполните это поле",
+                minlength: jQuery.validator.format("Пожалуйста, введите не менее {0} символов")
+            },
+            tel: {
+                required: "Пожалуйста, заполните это поле"
+            },
+            email: {
+                required: "Пожалуйста, заполните это поле",
+                email: "Недействительный адрес почты"
+            }
+        }
+    });
+}
+modalValidate('.consultation .form');
+modalValidate('#modal__consultation .form');
+modalValidate('#modal__buy .form');
+
+$("input[name=tel]").mask("+7 (999) 999-9999");
