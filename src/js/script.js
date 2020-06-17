@@ -36,7 +36,7 @@ toggleSlide('.catalog-item__link');
 toggleSlide('.catalog-item__back');
 
 $('[data-modal=consultation]').on('click', function() {
-    $('.overlay, #modal__consultation').fadeIn('slow');
+    $('.overlay, #modal__consultation').fadeIn();
 });
 
 $('.modal__close').on('click', function(){
@@ -85,3 +85,32 @@ modalValidate('#modal__consultation .form');
 modalValidate('#modal__buy .form');
 
 $("input[name=tel]").mask("+7 (999) 999-9999");
+
+$('form').submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+        type: "POST",
+        url: "php/smart.php",
+        data: $(this).serialize()
+    }).done(function(){
+        $(this).find("input").val("");
+        $('#modal__consultation, #modal__buy').fadeOut();
+        $('.overlay, #modal__thanks').fadeIn();
+        $("form").trigger("reset");
+    });
+    return false;
+});
+
+$(window).scroll(function(){
+    if($(this).scrollTop() > 1600) {
+        $('.pageup').fadeIn();
+    } else {
+        $('.pageup').fadeOut();
+    }
+})
+
+$("a[href^='#']").click(function(){
+    const _href = $(this).attr("href");
+    $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+    return false;
+});
