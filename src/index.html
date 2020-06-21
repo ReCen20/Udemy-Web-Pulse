@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -73,7 +74,7 @@
                         так как сами бегают полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!</div>
                 </div>
                 <div class="advantages__block">
-                    <div class="advantages__icon">
+                    <div class="advantages__icon advantages__icon_heart">
                         <img src="./icons/advantages/heart.png" alt="heart">
                     </div>
                     <h3 class="subtitle subtitle_advantages">Заботимся о здоровье</h3>
@@ -108,7 +109,7 @@
         </div>
     </section>
 
-    <section class="carousel">
+    <div class="carousel">
         <div class="container">
             <div class="carousel__inner">
                 <div>
@@ -121,10 +122,10 @@
                     <img src="icons/carousel/polar-triple.png" alt="polar-triple">
                 </div>
             </div>
-            <button type="button" class="carousel__prev"><img src="icons/carousel/left-arrow.png"></button>
-            <button type="button" class="carousel__next"><img src="icons/carousel/right-arrow.png"></button>
+            <button type="button" class="carousel__prev"><img src="icons/carousel/left-arrow.png" alt="left-arrow"></button>
+            <button type="button" class="carousel__next"><img src="icons/carousel/right-arrow.png" alt="right-arrow"></button>
         </div>
-    </section>
+    </div>
 
     <section class="catalog">
         <div class="container">
@@ -400,6 +401,7 @@
                         <button class="button button_catalog-item">купить</button>
                     </div>
                 </div>
+            </div>
 
         </div>
     </section>
@@ -407,7 +409,7 @@
     <section class="feed">
         <div class="container">
             <h2 class="title">отзывы клиентов</h2>
-            <div class="feed__item">
+            <div class="feed__item wow animate__animated animate__fadeInUp">
                 <img src="icons/feed/avatar_1.png" alt="avatar_1" class="feed__avatar">
                 <div class="feed__content">
                     <h3 class="subtitle subtitle_feed">Ирина Иванченко</h3>
@@ -416,7 +418,7 @@
                         именно под мои цели и финансовые возможности.Через некоторое время решила обновить гаджет - не раздумывая обратилась туда же.<br><br>Новые цели - новый гаджет!<br><br>Спасибо, RunSmart!</div>
                 </div>
             </div>
-            <div class="feed__item">
+            <div class="feed__item wow animate__animated animate__fadeInUp">
                 <img src="icons/feed/avatar_2.png" alt="avatar_2" class="feed__avatar">
                 <div class="feed__content">
                     <h3 class="subtitle subtitle_feed">Иван Сёмочкин</h3>
@@ -425,7 +427,7 @@
                         Купил пульсометр, ещё в подарок получил тренировку. Со мной вместе провели первую тренировку, научили пользоваться новым гаджетом. Также объяснили основы анатомии, составили план тренировок на месяц вперёд.<br><br>С ними подготовился к своему первому полумарафону! Спасибо!!!</div>
                 </div>
             </div>
-            <div class="feed__item">
+            <div class="feed__item wow animate__animated animate__fadeInUp">
                 <img src="icons/feed/avatar_3.png" alt="avatar_3" class="feed__avatar">
                 <div class="feed__content">
                     <h3 class="subtitle subtitle_feed">Юлия Дашкина</h3>
@@ -439,7 +441,7 @@
     </section>
 
     <footer class="footer">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.4210994357595!2d37.646051860811944!3d55.768557935862624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCAxMDcwNzg!5e0!3m2!1sru!2sru!4v1592044555768!5m2!1sru!2sru" width="100%" height="630" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.4210994357595!2d37.646051860811944!3d55.768557935862624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCAxMDcwNzg!5e0!3m2!1sru!2sru!4v1592044555768!5m2!1sru!2sru"></iframe>
         <div class="footer__content">
             <address class="footer__address">Москва, Мясницкий проезд, д.3с1</address>
             <a href="tel=84999228974" class="footer__call">8 (499) 922-89-74</a>
@@ -459,7 +461,7 @@
 
     <div class="overlay">
         <div class="modal" id="modal__consultation">
-            <div class="modal__close">&times</div>
+            <div class="modal__close">&times;</div>
             <h3 class="subtitle">Просто заполните форму заявки</h3>
             <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
             <form class="form">
@@ -470,7 +472,7 @@
             </form>
         </div>
         <div class="modal" id="modal__buy">
-            <div class="modal__close">&times</div>
+            <div class="modal__close">&times;</div>
             <h3 class="subtitle">Ваш заказ:</h3>
             <div class="modal__descr">Пульсометр Polar FT1</div>
             <form class="form">
@@ -481,7 +483,7 @@
             </form>
         </div>
         <div class="modal modal_thanks" id="modal__thanks">
-            <div class="modal__close">&times</div>
+            <div class="modal__close">&times;</div>
             <h3 class="subtitle">Спасибо за вашу заявку!</h3>
             <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
         </div>
@@ -491,11 +493,12 @@
         <img src="icons/up.svg" alt="up">
     </a>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>            
+    <script src="js/wow.min.js"></script>
+    <script src="js/script.js"></script>            
 </body>
 </html>
