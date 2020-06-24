@@ -42,38 +42,38 @@ gulp.task("html", function() {
     return gulp.src('src/*.html')
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest('./docs'));
-})
+});
 
 gulp.task("css", function() {
     return gulp.src('src/css/**/*+(.css|.min.css)')
         .pipe(gulp.dest('./docs/css'));
-})
+});
 
 gulp.task("js", function() {
     return gulp.src('src/js/**/*.js')
         .pipe(gulp.dest('./docs/js'));
-})
+});
 
 gulp.task("icons", function() {
     return gulp.src('src/icons/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('./docs/icons'));
-})
+});
 
 gulp.task("img", function() {
     return gulp.src('src/img/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('./docs/img'));
-})
+});
 
 gulp.task("fonts", function() {
     return gulp.src('src/fonts/**/*')
         .pipe(gulp.dest('./docs/fonts'));
-})
+});
 
 gulp.task("php", function() {
     return gulp.src('src/php/**/*')
         .pipe(gulp.dest('./docs/php'));
-})
+});
 
-gulp.task("default", gulp.parallel("browser-sync", "styles", "watch", "html", "css", "js", "img", "icons", "fonts",));
+gulp.task("default", gulp.parallel("browser-sync", "styles", "watch", "html", "css", "js", "img", "icons", "fonts"));
